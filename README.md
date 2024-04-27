@@ -54,7 +54,7 @@
 + **Make**
   + construit des programmes exécutables et des bibliothèques à partir du code source
 
-
+![Outils de Construction](images/image1.jpeg)
 
 ### 6) Un cycle de vie de construction est composé de phases
 
@@ -65,5 +65,7 @@
 + `verify` : effectuer des vérifications sur les résultats des tests d'intégration pour s'assurer que les critères de qualité sont respectés
 + `install` : installe le package dans le référentiel local, pour une utilisation en tant que dépendance dans d'autres projets localement
 + `deploy` : effectué dans l'environnement de construction, copie le package final dans le référentiel distant pour le partager avec d'autres développeurs et projets.
+
+![Cycle de Vie Maven](images/image2.jpeg)
 
   + https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
