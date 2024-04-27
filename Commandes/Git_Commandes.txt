@@ -1,0 +1,67 @@
+$ ssh -i Downloads/buildkey.pem ubuntu@54.204.129.179
+
+ubuntu@ip-172-31-35-84:~$ sudo apt update
+ubuntu@ip-172-31-35-84:~$ git
+ubuntu@ip-172-31-35-84:~$ sudo apt search jdk
+ubuntu@ip-172-31-35-84:~$ sudo apt install openjdk-11-jdk -y
+ubuntu@ip-172-31-35-84:~$ sudo apt install maven -y
+ubuntu@ip-172-31-35-84:~$ mvn -version
+ubuntu@ip-172-31-35-84:~$ wget https://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+ubuntu@ip-172-31-35-84:~$ ls
+apache-maven-3.3.9-bin.tar.gz
+ubuntu@ip-172-31-35-84:~$ tar xzvf apache-maven-3.3.9-bin.tar.gz
+ubuntu@ip-172-31-35-84:~$ ls
+ubuntu@ip-172-31-35-84:~$ ls apache-maven-3.3.9
+ubuntu@ip-172-31-35-84:~$ ls apache-maven-3.3.9/bin/
+ubuntu@ip-172-31-35-84:~$ apache-maven-3.3.9/bin/mvn -version
+ubuntu@ip-172-31-35-84:~$ sudo mv apache-maven-3.3.9 /opt/
+ubuntu@ip-172-31-35-84:~$ /opt/apache-maven-3.3.9/bin/mvn -version
+
+ubuntu@ip-172-31-35-84:~$ git clone https://github.com/hkhcoder/vprofile-project.git
+ubuntu@ip-172-31-35-84:~$ ls
+ubuntu@ip-172-31-35-84:~$ cd vprofile-project/
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn validate
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< com.visualpathit:vprofile >----------------------
+[INFO] Building Visualpathit VProfile Webapp v2
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.263 s
+[INFO] Finished at: 2023-09-17T15:11:54Z
+[INFO] ------------------------------------------------------------------------
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn test
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls target/
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn clean
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn install
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls target/
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls /home/ubuntu/.m2/
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls /home/ubuntu/.m2/repository/
+antlr                     commons-collections  commons-validator  org
+aopalliance               commons-dbcp         dom4j              oro
+backport-util-concurrent  commons-digester     io                 xerces
+ch                        commons-fileupload   javax              xml-apis
+classworlds               commons-httpclient   joda-time          xmlpull
+com                       commons-io           junit              xpp3
+commons-beanutils         commons-lang         log4j
+commons-cli               commons-logging      mysql
+commons-codec             commons-pool         net
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn install
+ubuntu@ip-172-31-35-84:~/vprofile-project$ rm -rf /home/ubuntu/.m2/repository/*
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn install
+ubuntu@ip-172-31-35-84:~/vprofile-project$ rm -rf /home/ubuntu/.m2/repository/*
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn clean
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls
+ubuntu@ip-172-31-35-84:~/vprofile-project$ /opt/apache-maven-3.3.9/bin/mvn install
+ubuntu@ip-172-31-35-84:~/vprofile-project$ vim pom.xml
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls target/
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn clean install
+ubuntu@ip-172-31-35-84:~/vprofile-project$ ls target/
+ubuntu@ip-172-31-35-84:~/vprofile-project$ vim pom.xml
+ubuntu@ip-172-31-35-84:~/vprofile-project$ mvn -version

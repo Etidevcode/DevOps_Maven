@@ -1,0 +1,24 @@
+[cloudshell-user@ip-10-2-42-117 ~]$ cat /etc/os-release
+NAME="Amazon Linux"
+VERSION="2"
+ID="amzn"
+ID_LIKE="centos rhel fedora"
+VERSION_ID="2"
+PRETTY_NAME="Amazon Linux 2"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2"
+HOME_URL="https://amazonlinux.com/"
+
+[cloudshell-user@ip-10-2-42-117 ~]$ sudo yum search jdk
+[cloudshell-user@ip-10-2-42-117 ~]$ sudo yum install java-1.8.0-openjdk -y
+[cloudshell-user@ip-10-2-42-117 ~]$ sudo yum install maven -y
+[cloudshell-user@ip-10-2-42-117 ~]$ sudo sudo yum search java
+[cloudshell-user@ip-10-2-42-117 ~]$ mvn -version
+[cloudshell-user@ip-10-2-42-117 ~]$ git clone https://github.com/hkhcoder/vprofile-project.git
+[cloudshell-user@ip-10-2-42-117 ~]$ ls
+[cloudshell-user@ip-10-2-42-117 ~]$ cd vprofile-project/
+[cloudshell-user@ip-10-2-42-117 vprofile-project]$ ls
+[cloudshell-user@ip-10-2-42-117 vprofile-project]$ mvn install
+[cloudshell-user@ip-10-2-42-117 vprofile-project]$ aws s3 ls
+[cloudshell-user@ip-10-2-42-117 vprofile-project]$ aws s3 mb s3://maven-arts
+[cloudshell-user@ip-10-2-42-117 vprofile-project]$ aws s3 cp target/vprofile-v2.war  s3://maven-arts
